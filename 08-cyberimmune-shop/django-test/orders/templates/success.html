@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ оформлен</title>
+</head>
+<body>
+<h1>Заказ успешно оформлен!</h1>
+
+<p><strong>ID заказа:</strong> {{ order.id }}</p>
+<p><strong>Имя:</strong> {{ order.name }}</p>
+<p><strong>Адрес:</strong> {{ order.address }}</p>
+<p><strong>Товар:</strong> {{ order.item }}</p>
+<p><strong>Количество:</strong> {{ order.quantity }}</p>
+
+<br>
+
+<a href="/orders/">Оформить ещё один заказ</a>
+</body>
+</html>
