@@ -1,0 +1,23 @@
+<h1>Все заказы</h1>
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Адрес</th>
+        <th>Товар</th>
+        <th>Кол-во</th>
+    </tr>
+
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.name }}</td>
+        <td>{{ order.address }}</td>
+        <td>{{ order.item }}</td>
+        <td>{{ order.quantity }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/control/">Назад</a>

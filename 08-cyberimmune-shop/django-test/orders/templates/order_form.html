@@ -1,0 +1,30 @@
+<html>
+<body>
+<h2>Создать заказ</h2>
+
+{% if error %}
+<div style="color: red; font-weight: bold;">
+    Ошибка: {{ error }}
+</div>
+{% endif %}
+
+<form method="post" action="/orders/new/">
+    
+    {% csrf_token %}
+    <label>Имя:</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label>Адрес:</label><br>
+    <input type="text" name="address"><br><br>
+
+    <label>Товар:</label><br>
+    <input type="text" name="item"><br><br>
+
+    <label>Количество:</label><br>
+    <input type="number" name="quantity"><br><br>
+
+    <button type="submit">Отправить</button>
+</form>
+
+</body>
+</html>
